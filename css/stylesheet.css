@@ -17,9 +17,7 @@ html{
 	scroll-behavior: smooth;
 }
 
-figcaption{
-	display: none;
-}
+
 /* end reset*/
 
 
@@ -128,8 +126,8 @@ footer{
 }
 
 .card figcaption{
-	font-weight: 200;
-	font-size: 1rem;
+	font-weight: 100;
+	font-size: 0.7rem;
 	margin: 1rem;
 	text-align: center;
 }
@@ -157,9 +155,11 @@ footer{
 		width: min(100%, 325px);
 	}
 
+	/*
 	.card figure{
 		flex-flow: column-reverse;
 	}
+	*/
 
 	.card p{
 		margin: 0.1em 0;
@@ -171,8 +171,16 @@ footer{
 
 /* large screen */
 @media screen and (min-width: 992px){
+	header{
+		font-size: 1.75rem;
+	}
+	
 	.card{
 		width: min(100%, 400px);
+	}
+
+	.card p{
+		font-size: 1.5rem;
 	}
 }
 
