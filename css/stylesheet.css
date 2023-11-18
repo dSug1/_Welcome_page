@@ -96,7 +96,7 @@ footer{
 	padding: 1rem;
 
 	display: grid;
-	grid-template-rows: 2;
+	grid-template-rows: 2fr;
 	grid-auto-rows: auto;
 	grid-template-areas: 
     "card_image" 
