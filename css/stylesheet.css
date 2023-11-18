@@ -35,6 +35,7 @@ body::before {
     background: no-repeat center url("../Assets/image2.png");
 	background-size: cover;
 	opacity: .6;
+
     content: "";
     z-index: -1;
 }
@@ -46,6 +47,8 @@ body{
 	font-family: "Roboto", sans-serif;
 	font-size: 0.9rem;
 	color: whitesmoke;
+
+	backdrop-filter: brightness(70%);
 	
 	display: flex;
 	flex-direction: column;
