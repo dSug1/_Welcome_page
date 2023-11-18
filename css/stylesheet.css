@@ -54,7 +54,7 @@ header, footer{
 }
 
 header{
-	top:0;
+	top: 1%;
 }
 
 nav{
@@ -140,6 +140,10 @@ footer{
 		padding: 1rem;
 	}	
 	
+	header{
+		top: 0.7%;
+	}
+
 	.card{
 		width: min(100%, 400px);
 	}
@@ -172,6 +176,7 @@ footer{
 /* large screen */
 @media screen and (min-width: 992px){
 	header{
+		top: 0.7%
 		font-size: 1.75rem;
 	}
 	
