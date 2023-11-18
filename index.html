@@ -5,20 +5,46 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"   content="width=device-width, initial-scale=1.0">
-    <title>CSS Media queries</title>
+    <title>CSS Welcome page</title>
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
     <header>
-        <h1>Header text</h1>
-        <nav><h2>Navigation menu</h2></nav>
+        <h1>Our projects</h1>
+        <nav>
+            <a href="#project1">Creating model</a>
+            <a href="#project2">Evee rendering</a>
+            <a href="#project3">Cycles rendering</a>
+        </nav>
     </header>
+
     <main>
-        <h2>Main text</h2>
-    </main>
-    <footer>
-        <h2>Footer text</h2>
+        <article id="project1" class="card">
+            <figure>
+                <img src="Assets/image1.png" alt="Blender model" width="692" height="519">       <!-- update the width and the height of the image -->
+                <figcaption><span class="nowrap">model</span></figcaption>
+            </figure>
+            <p>Beach scene model</p>
+        </article>
+        <article id="project2" class="card">
+            <figure>
+                <img src="Assets/image2.png" alt="Evee rendering" width="1600" height="1200">       <!-- update the width and the height of the image -->
+                <figcaption><span class="nowrap">Evee</span></figcaption>
+            </figure>
+            <p>rendered with Evee</p>
+        </article>
+        <article id="project3" class="card">
+            <figure>
+                <img src="Assets/image3.png" alt="Cycles rendering" width="1600" height="1200">       <!-- update the width and the height of the image -->
+                <figcaption><span class="nowrap">Cycles</span></figcaption>
+            </figure>
+            <p>rendered with Cycles</p>
+        </article>
+     </main>
+ 
+     <footer>
+        <p>&copy; Dsug1</p>
     </footer>
 </body>
 </html>
