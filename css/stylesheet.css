@@ -104,7 +104,6 @@ footer{
     "card_image" 
     "card_caption";
     gap: 0.5rem;
-	place-content: right;
 }
 
 .card figure{
