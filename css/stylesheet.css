@@ -36,11 +36,14 @@ body{
 	font-size: 0.9rem;
 	color: whitesmoke;
 	
-	/*
+	
 	background: no-repeat center url("../Assets/image2.png");
-	*/ 
+	
+	/*
 	background-image: radial-gradient(#C1C1FF, #151621); 
-	background-size: 100%;
+
+	*/
+	background-size: cover;
 
 	display: flex;
 	flex-direction: column;
@@ -91,7 +94,7 @@ footer{
 	scroll-margin-top: 5rem;				/* to be adjusted*/
 	width: min(100%, 200px);
 
-	border: 2px solid white;
+	/*border: 2px solid white;*/
 	border-radius: 10px;
 	padding: 1rem;
 
