@@ -1,6 +1,6 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* begin reset*/
+/* start RESET*/
 *{
 	margin: 0;
 	padding: 0;
@@ -16,40 +16,40 @@ img{
 html{
 	scroll-behavior: smooth;
 }
+/* end RESET*/
 
 
-/* end reset*/
-
-
-/* Utility classes*/
+/* UTILITY CLASSES*/
 .nowrap{
 	white-space: nowrap;
 }
 
+/* GENERAL STYLES*/
+body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
+    background: no-repeat center url("../Assets/image2.png");
+	background-size: cover;
+	opacity: .6;
+    content: "";
+    z-index: -1;
+}
 
-/* General styles*/
 body{
+	position: relative;
 	min-height: 100vh;
 
 	font-family: "Roboto", sans-serif;
 	font-size: 0.9rem;
 	color: whitesmoke;
 	
-	
-	background: no-repeat center url("../Assets/image2.png");
-	
-	/*
-	background-image: radial-gradient(#C1C1FF, #151621); 
-
-	*/
-	background-size: cover;
-
 	display: flex;
 	flex-direction: column;
 }
-
-
 
 header, footer{
 	position: sticky;
@@ -89,19 +89,17 @@ footer{
 	bottom:0;
 }
 
-/* project cards*/
 .card{
 	scroll-margin-top: 5rem;				/* to be adjusted*/
 	width: min(100%, 200px);
 
-	/*border: 2px solid white;*/
+	/*border: 2px solid whitesmoke;*/
 	border-radius: 10px;
 	padding: 1rem;
 
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-
 }
 
 .card figure{
@@ -111,7 +109,7 @@ footer{
 
 .card img{
 	margin-top: 0.7rem;
-	border: 1px solid white;
+	border: 2px solid whitesmoke;
 	border-radius: 20px;
 }
 
@@ -128,6 +126,7 @@ footer{
 	text-align: left;
 }
 
+/*MEDIA QUERIES*/
 /* small screen */
 @media screen and (min-width: 576px){
 	main{
@@ -227,5 +226,4 @@ footer{
 	.nowrap{
 		white-space: normal;
 	}
-
 }
