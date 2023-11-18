@@ -95,23 +95,37 @@ footer{
 
 	border: 2px solid white;
 	border-radius: 10px;
-	padding: 0.5rem;
+	padding: 1rem;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	display: grid;
+	grid-template-rows: 2;
+	grid-auto-rows: auto;
+	grid-template-areas: 
+    "card_image" 
+    "card_caption";
+    gap: 0.5rem;
+	place-content: right;
 }
 
 .card figure{
+	grid-area: card_image;	
 	display: flex;
 	flex-flow: column nowrap;
-	width: 85%;
+	width: 100%;
 	height: auto;
 }
 
 .card img{
 	border: 1px solid white;
 	border-radius: 20px;
+}
+
+.card p{
+	grid-area: card_caption;
+	font-weight: 200;
+	font-size: 1rem;
+	margin: 1rem;
+	text-align: center;
 }
 
 .card figcaption{
@@ -148,6 +162,9 @@ footer{
 		flex-flow: column-reverse;
 	}
 
+	.card p{
+		margin: 0.1em 0;
+	}
 	.card figcaption{
 		margin: 0.1em 0;
 	}
@@ -185,6 +202,10 @@ footer{
 
 	.card{
 		width: min(calc(33% - 0.25rem), 200px);
+	}
+
+	.card p{
+		font-size: 1.25rem;
 	}
 
 	.card figcaption{
