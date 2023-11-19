@@ -54,7 +54,7 @@ body{
 	flex-direction: column;
 }
 
-header, footer{
+:is(header, footer){
 	position: sticky;
 	text-align: center;
 }
@@ -69,12 +69,12 @@ nav{
 	justify-content: space-evenly;
 }
 
-nav a, nav a:visited{
+nav a:any-link{
 	color: whitesmoke;
 	text-decoration: none;
 }
 
-nav a:hover, nav a:focus{
+nav :is(a:hover, a:focus){
 	text-decoration: underline;
 	color: hsla(0, 100%, 100%, 0.55);
 }
@@ -104,6 +104,14 @@ footer{
 	flex-flow: column;
 	align-items: center;
 }
+
+.card:target{
+	width: 300px;
+}
+.card:target img{
+	border: 3px solid;
+}
+
 
 .card figure{
 	display: flex;
