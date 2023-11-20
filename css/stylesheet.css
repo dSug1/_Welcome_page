@@ -18,6 +18,23 @@ html{
 }
 /* end RESET*/
 
+/* VARIABLES */
+:root{
+	/*fonts*/
+	--FONT-FAMILY: "Roboto", sans-serif;
+	--FONT-XS: 0.5rem;
+	--FONT-SMALL: 0.7rem;
+	--FONT-MEDIUM: 1rem;
+	--FONT-LARGE: 1.5rem;
+	--FONT-XL: 1.7rem;
+	/*colors*/
+	--LIGHT-COLOR: whitesmoke;
+
+	/*general*/
+	--PADDING-SMALL: 0.5rem;
+	--PADDING-MEDIUM: 1rem;
+	--BORDER-LIGHT:	2px solid var(--LIGHT-COLOR);
+}
 
 /* UTILITY CLASSES*/
 .nowrap{
@@ -44,9 +61,9 @@ body{
 	position: relative;
 	min-height: 100vh;
 
-	font-family: "Roboto", sans-serif;
-	font-size: 0.9rem;
-	color: whitesmoke;
+	font-family: var(--FONT-FAMILY);
+	font-size: var(--FONT-SMALL);
+	color: var(--LIGHT-COLOR);
 
 	backdrop-filter: brightness(70%);
 	
@@ -64,13 +81,13 @@ header{
 }
 
 nav{
-	padding: 0.5rem;
+	padding: var(--PADDING-SMALL);
 	display: flex;
 	justify-content: space-evenly;
 }
 
 nav a:any-link{
-	color: whitesmoke;
+	color: var(--LIGHT-COLOR);
 	text-decoration: none;
 }
 
@@ -85,7 +102,7 @@ main{
 	flex-direction: column;
 	align-items: center;
 	gap: 3rem;
-	padding: 1rem;
+	padding: var(--PADDING-MEDIUM);
 }
 
 footer{
@@ -96,9 +113,12 @@ footer{
 	scroll-margin-top: 5rem;				/* to be adjusted*/
 	width: min(100%, 200px);
 
-	/*border: 2px solid whitesmoke;*/
+	/*
+	border: var(--BORDER-LIGHT);
 	border-radius: 10px;
-	padding: 1rem;
+	*/
+
+	padding: var(--PADDING-MEDIUM);
 
 	display: flex;
 	flex-flow: column;
@@ -110,7 +130,7 @@ footer{
 }
 
 .card:target img{
-	border: 3px solid;
+	border: var(--BORDER-LIGHT);
 }
 
 .card figure{
@@ -120,7 +140,7 @@ footer{
 
 .card img{
 	margin-top: 0.7rem;
-	border: 2px solid whitesmoke;
+	border: var(--BORDER-LIGHT);
 	border-radius: 20px;
 }
 
@@ -138,7 +158,7 @@ footer{
 
 .card p{
 	font-weight: 200;
-	font-size: 1rem;
+	font-size: var(--FONT-MEDIUM);
 	margin-top: 1rem;
 	text-align: center;
 	position: relative;
@@ -146,7 +166,7 @@ footer{
 
 .card p::before{
 	content: open-quote;
-	font-size: 1em;
+	font-size: var(--FONT-MEDIUM);
 	position: absolute;
 	top: -0.25em;
 	left: -0.5em;
@@ -154,7 +174,7 @@ footer{
 
 .card p::after{
 	content: close-quote;
-	font-size: 1em;
+	font-size: var(--FONT-MEDIUM);
 	position: absolute;
 	top: -0.25em;
 	right: -0.5em;
@@ -162,7 +182,7 @@ footer{
 
 .card figcaption{
 	font-weight: 100;
-	font-size: 0.7rem;
+	font-size: var(--FONT-SMALL);
 	text-align: left;
 }
 
@@ -171,17 +191,24 @@ footer{
 }
 
 .card figcaption::first-letter{
-	font-size: 1rem;
+	font-size: var(--FONT-MEDIUM);
 }
 
 
 /*MEDIA QUERIES*/
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--LIGHT-COLOR: rgb(	230	250	230);
+	}
+}
+
 /* small screen */
 @media screen and (min-width: 576px){
 	main{
 		flex-flow: row wrap;
 		justify-content: center;
-		padding: 1rem;
+		padding: var(--PADDING-MEDIUM);
 	}	
 	
 	header{
@@ -221,7 +248,7 @@ footer{
 @media screen and (min-width: 992px){
 	header{
 		top: 0.7%;
-		font-size: 1.1rem;
+		font-size: var(--FONT-MEDIUM);
 	}
 	
 	.card{
@@ -229,14 +256,14 @@ footer{
 	}
 
 	.card p{
-		font-size: 1.5rem;
+		font-size: var(--FONT-LARGE);
 	}
 }
 
 /* xlarge screen */
 @media screen and (min-width: 1200px){
 	header{
-		font-size: 1.5rem;
+		font-size: var(--FONT-LARGE);
 	}	
 
 	.card{
@@ -247,7 +274,7 @@ footer{
 /* mobile device landscape */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
 	h1{
-		font-size: 1.5rem;
+		font-size: var(--FONT-LARGE);
 	}
 
 	nav{
@@ -265,11 +292,11 @@ footer{
 	}
 
 	.card p{
-		font-size: 1.25rem;
+		font-size: var(--FONT-MEDIUM);
 	}
 
 	.card figcaption{
-		font-size: 0.5rem;
+		font-size: var(--FONT-XS);
 	}
 
 	.nowrap{
