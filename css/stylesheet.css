@@ -24,7 +24,7 @@ html{
 	--FONT-FAMILY: "Roboto", sans-serif;
 	--FONT-XS: min(0.5rem, 2.5vh);
 	--FONT-SMALL: min(0.5rem, 2.5vh);
-	--FONT-MEDIUM: min(1rem, 3vh);
+	--FONT-MEDIUM: clamp(1rem, 3vh, 1.5rem);
 	--FONT-LARGE: min(1.5rem, 8vh);
 	--FONT-XL: min(1.7rem, 9vh);
 	/*colors*/
@@ -93,7 +93,7 @@ nav a:any-link{
 
 nav :is(a:hover, a:focus){
 	text-decoration: underline;
-	color: hsla(0, 100%, 100%, 0.55);
+	filter: brightness(150%);
 }
 
 main{
