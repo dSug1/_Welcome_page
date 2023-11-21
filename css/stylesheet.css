@@ -22,11 +22,11 @@ html{
 :root{
 	/*fonts*/
 	--FONT-FAMILY: "Roboto", sans-serif;
-	--FONT-XS: 0.5rem;
-	--FONT-SMALL: 0.7rem;
-	--FONT-MEDIUM: 1rem;
-	--FONT-LARGE: 1.5rem;
-	--FONT-XL: 1.7rem;
+	--FONT-XS: min(0.5rem, 2.5vh);
+	--FONT-SMALL: min(0.5rem, 2.5vh);
+	--FONT-MEDIUM: min(1rem, 3vh);
+	--FONT-LARGE: min(1.5rem, 8vh);
+	--FONT-XL: min(1.7rem, 9vh);
 	/*colors*/
 	--LIGHT-COLOR: whitesmoke;
 
