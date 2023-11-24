@@ -148,7 +148,6 @@ header{
 	transform-origin: top center;
 	animation: shownavigation 0.5s ease-in-out forwards;
 	background-color: var(--HEADER-BGCOLOR);
-
 }
 
 :is(header:hover, header:focus-within) .header-navigation{
