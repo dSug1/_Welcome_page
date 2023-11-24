@@ -107,7 +107,7 @@ main{
 
 .card{
 	scroll-margin-top: 5rem;				/* to be adjusted*/
-	width: min(100%, 200px);
+	width: min(100%, 150px);
 
 	/*
 	border: var(--BORDER-LIGHT);
@@ -121,7 +121,7 @@ main{
 	align-items: center;
 }
 
-.card:target{ width: 45%; transition: all 0.2s ease-in-out 0s;}
+.card:target{ width: 65%; transition: all 0.2s ease-in-out 0s;}
 .card:not(:target){ transition: all 0.2s ease-in-out 0s;}
 
 .card:target img{ border: var(--BORDER-LIGHT); }
@@ -195,7 +195,6 @@ main{
 
 /* medium screen */
 @media screen and (min-width: 768px){
-	nav{ display: none; }
 	.card{ width: min(100%, 211px); }
 	/* .card figure{ flex-flow: column-reverse; } */
 	.card p{ margin: 0.1em 0; }
@@ -221,7 +220,6 @@ main{
 /* mobile device landscape */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
 	h1{	font-size: var(--FONT-LARGE); }
-	nav{ display: none; }
 	main{
 		flex-flow: row nowrap;
 		justify-content: space-evenly;
