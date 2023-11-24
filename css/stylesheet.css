@@ -34,7 +34,7 @@ html{
 	--MENU_ICON-BGCOLOR: var(--LIGHT-COLOR);
 	--NAVIGATION_LIST_COLOR: var(--LIGHT-COLOR);
 	/*general*/
-	--PADDING-XS: 0.15rem;
+	--PADDING-XS: 0.1rem;
 	--PADDING-SMALL: 0.5rem;
 	--PADDING-MEDIUM: 1rem;
 	--BORDER-LIGHT:	2px solid var(--LIGHT-COLOR);
@@ -141,14 +141,16 @@ header{
 }
 
 .header-navigation{
-	display: none;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 	transform-origin: top center;
 	animation: shownavigation 0.5s ease-in-out forwards;
 	background-color: var(--HEADER-BGCOLOR);
 }
 
 :is(header:hover, header:focus-within) .header-navigation{
-	display: block;
+	/*display: block;*/
 }
 
 @keyframes shownavigation{
@@ -170,14 +172,16 @@ header{
 }
 
 .header-navlistitem{
-	padding: 0.5rem;
+	width: 25%;
+	margin-left: 5%;
+	padding: var(--PADDING-SMALL) var(--PADDING-XS);
 	border-top: 1px solid var(--NAVIGATION_LIST_COLOR);
 }
 
 .header-navlistitem-anchor{
 	display: block;
-	text-align: center;
-	width: 80%;								/* required because animation expands it */
+	text-align: left;
+	width: 95%;								/* required because animation expands it */
 	margin: auto;							/* it centers the block elements */
 }
 
