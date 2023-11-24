@@ -38,9 +38,14 @@ html{
 	--PADDING-SMALL: 0.5rem;
 	--PADDING-MEDIUM: 1rem;
 	--BORDER-LIGHT:	2px solid var(--LIGHT-COLOR);
+	--MARGIN-SMALL: 3vw;
 	/*navigation*/
 	--HEADER_MENU_BUTTON_SIZE: 34px;
 	--HEADER_MENU_BUTTON_SINGLEBAR_HEIGHT: 3px;
+	--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X: -17px;
+	--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_Y: 10px;
+	--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_Y_NEGATIVE: -10px;
+
 }
 
 /* UTILITY CLASSES*/
@@ -89,7 +94,7 @@ header{
 }
 
 .header-title-line{
-	margin: 0 3vw;
+	margin-left: 3vw;
 	padding: 0 var(--PADDING-SMALL);
 	display: flex;
 	flex-flow: row nowrap;
@@ -122,11 +127,11 @@ header{
 }
 
 .header-menu-icon::before{
-	transform: translate(-calc(var(--HEADER_MENU_BUTTON_SIZE)/2), -calc(var(--HEADER_MENU_BUTTON_SIZE)/4));
+	transform: translate(var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X), var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_Y_NEGATIVE));	
 }
 
 .header-menu-icon::after{
-	transform: translate(-calc(var(--HEADER_MENU_BUTTON_SIZE)/2), calc(var(--HEADER_MENU_BUTTON_SIZE)/4));
+	transform: translate(var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X), var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_Y));
 }
 
 :is(header:hover, header:focus-within) .header-menu-icon{
@@ -137,11 +142,11 @@ header{
 }
 
 :is(header:hover, header:focus-within) .header-menu-icon::before{
-	transform: translateX(-20px) rotate(-45deg);
+	transform: translateX(var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X)) rotate(-45deg);
 }
 
 :is(header:hover, header:focus-within) .header-menu-icon::after{
-	transform: translateX(-20px) rotate(-45deg);
+	transform: translateX(var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X)) rotate(-45deg);
 }
 
 .header-navigation{
