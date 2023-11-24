@@ -141,16 +141,17 @@ header{
 }
 
 .header-navigation{
-	display: flex;
+	display: none;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	transform-origin: top center;
 	animation: shownavigation 0.5s ease-in-out forwards;
 	background-color: var(--HEADER-BGCOLOR);
+
 }
 
 :is(header:hover, header:focus-within) .header-navigation{
-	/*display: block;*/
+	display: flex;
 }
 
 @keyframes shownavigation{
@@ -172,7 +173,7 @@ header{
 }
 
 .header-navlistitem{
-	width: 25%;
+	width: 20%;
 	margin-left: 5%;
 	padding: var(--PADDING-SMALL) var(--PADDING-XS);
 	border-top: 1px solid var(--NAVIGATION_LIST_COLOR);
