@@ -118,9 +118,7 @@ header{
 	transform: translate(var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X), var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_Y));}
 :is(header:hover, header:focus-within) .header__menu-icon{
 	background-color: transparent;
-	/*
-	transform: rotate(720deg);
-	*/}
+	/*transform: rotate(720deg);*/}
 :is(header:hover, header:focus-within) .header__menu-icon::before{
 	transform: translateX(var(--HEADER_MENU_BUTTON_SINGLEBAR_TRANSLATION_X)) rotate(-45deg);}
 :is(header:hover, header:focus-within) .header__menu-icon::after{
@@ -180,12 +178,10 @@ main{
 .card{
 	scroll-margin-top: 5rem;				/* to be adjusted*/
 	width: min(100%, 150px);
-
 	/*
 	border: var(--BORDER-LIGHT);
 	border-radius: 10px;
 	*/
-
 	padding: var(--PADDING-MEDIUM);
 
 	display: flex;
@@ -206,18 +202,18 @@ main{
 	border-radius: 20px;}
 /* .card img[alt]{	border-color: red; } */
 /* .card img:not([alt]){ border-color: red; } */
-.card p{
-	font-weight: 200;
-	font-size: var(--FONT-MEDIUM);
-	margin-top: 1rem;
-	text-align: center;
-	position: relative;}
 .card p::before{
 	content: open-quote;
 	font-size: var(--FONT-MEDIUM);
 	position: absolute;
 	top: -0.25em;
 	left: -0.5em;}
+card p{
+	font-weight: 200;
+	font-size: var(--FONT-MEDIUM);
+	margin-top: 1rem;
+	text-align: center;
+	position: relative;}
 .card p::after{
 	content: close-quote;
 	font-size: var(--FONT-MEDIUM);
