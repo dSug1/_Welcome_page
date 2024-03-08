@@ -30,7 +30,7 @@ html{
 	--NAVIGATION_LIST_COLOR: var(--LIGHT-COLOR);
 	/*general*/
 	--PADDING-XS: 0.1rem;
-	--PADDING-SMALL: 0.5rem;
+	--PADDING-SMALL: 0.3rem;
 	--PADDING-MEDIUM: 1rem;
 	--BORDER-LIGHT:	2px solid var(--LIGHT-COLOR);
 	--MARGIN-SMALL: 3vw;
@@ -66,6 +66,7 @@ body{
 	font-family: var(--FONT-FAMILY);
 	font-size: var(--FONT-SMALL);
 	color: var(--LIGHT-COLOR);
+	gap: 1rem;
 
 	backdrop-filter: brightness(70%);
 	
@@ -172,24 +173,23 @@ main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 3rem;
+	gap: 1.5rem;
 	padding: var(--PADDING-MEDIUM);}
 
 /*SETUP OF CARDS*/
 .card{
 	scroll-margin-top: 5rem;				/* to be adjusted*/
-	width: min(100%, 150px);
+	width: min(70%, 300px);
 	/*
 	border: var(--BORDER-LIGHT);
 	border-radius: 10px;
 	*/
 	padding: var(--PADDING-MEDIUM);
-
 	display: flex;
 	flex-flow: column;
 	align-items: center;}
 .card:target{ 
-	width: 65%; transition: all 0.2s ease-in-out 0s;}
+	width: 90%; transition: all 0.2s ease-in-out 0s;}
 .card:not(:target){
 	transition: all 0.2s ease-in-out 0s;}
 .card:target img{
@@ -237,15 +237,13 @@ card p{
 /*small screen*/
 @media screen and (min-width: 576px){
 	main{
-		flex-flow: row wrap;
-		justify-content: center;
 		padding: var(--PADDING-MEDIUM);
 	}	
 	header{ top: 0.7%; }
-	.card{ width: min(100%, 205px); }}
+	.card{ width: min(80%, 400px); }}
 /*medium screen*/
 @media screen and (min-width: 768px){
-	.card{ width: min(100%, 211px); }
+	.card{ width: min(65%, 600px); }
 	/* .card figure{ flex-flow: column-reverse; } */
 	.card p{ margin: 0.1em 0; }
 	.card figcaption{ margin: 0.1em 0; }}
@@ -255,12 +253,14 @@ card p{
 		top: 0.7%;
 		font-size: var(--FONT-MEDIUM);
 	}
-	.card{ width: min(100%, 400px); }
+	.card{ width: min(70%, 800px); }
 	.card p{ font-size: var(--FONT-LARGE); }}
 /*xlarge screen*/
 @media screen and (min-width: 1200px){
+	body{gap: 3rem;}
 	header{ font-size: var(--FONT-LARGE); }	
-	.card{ width: min(calc(33% - 1rem), 650px); }}
+	.card{ width: min(calc(60% - 1rem), 1000px); }}
+	.card:target{ width: 75%; }
 /*mobile device landscape */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
 	h1{	font-size: var(--FONT-LARGE); }
