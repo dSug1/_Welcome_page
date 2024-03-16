@@ -1,10 +1,11 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* start RESET*/
+/*
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;}
+	box-sizing: border-box;}*/
 img{
 	display: block;
 	max-width: 100%;
@@ -66,7 +67,7 @@ body{
 	font-family: var(--FONT-FAMILY);
 	font-size: var(--FONT-SMALL);
 	color: var(--LIGHT-COLOR);
-	gap: 1rem;
+	/*gap: 1rem;*/
 
 	backdrop-filter: brightness(70%);
 	
@@ -87,7 +88,7 @@ header{
 	top: 2vh;
 	position: sticky;
 	text-align: center;
-	height: 25vh;}
+	height: 34vh;}
 .header__title-line{
 	margin-left: 3vw;
 	padding: 0 var(--PADDING-SMALL);
@@ -146,6 +147,7 @@ header{
 	}}
 .header__navlist{
 	list-style-type: none;
+	padding-inline-start: var(--PADDING-SMALL);
 	display: flex;
 	flex-flow: column nowrap;}
 .header__navlistitem{
@@ -173,24 +175,27 @@ main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1.5rem;
-	padding: var(--PADDING-MEDIUM);}
+	/*gap: 1.5rem;*/
+	padding: var(--PADDING-SMALL);}
 
 /*SETUP OF CARDS*/
 .card{
-	scroll-margin-top: 5rem;				/* to be adjusted*/
-	width: min(70%, 300px);
+	/*scroll-margin-top: 5rem;				/* to be adjusted*/
+	/*width: min(70%, 300px);*/
 	/*
 	border: var(--BORDER-LIGHT);
 	border-radius: 10px;
 	*/
-	padding: var(--PADDING-MEDIUM);
+	padding: var(--PADDING-SMALL);
 	display: flex;
 	flex-flow: column;
 	align-items: center;}
 .card:target{ 
-	width: 90%; transition: all 0.2s ease-in-out 0s;}
+	width: 90%;
+
+	transition: all 0.2s ease-in-out 0s;}
 .card:not(:target){
+	flex-grow: 1;
 	transition: all 0.2s ease-in-out 0s;}
 .card:target img{
 	border: var(--BORDER-LIGHT); }
@@ -259,8 +264,8 @@ card p{
 @media screen and (min-width: 1200px){
 	body{gap: 3rem;}
 	header{ font-size: var(--FONT-LARGE); }	
-	.card{ width: min(calc(60% - 1rem), 1000px); }}
-	.card:target{ width: 75%; }
+	.card{ width: min(calc(60% - 1rem), 1000px); }
+	.card:target{ width: 75%; }}
 /*mobile device landscape */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
 	h1{	font-size: var(--FONT-LARGE); }
