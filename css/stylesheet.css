@@ -36,8 +36,6 @@ html{
 	--BORDER-LIGHT:	2px solid var(--LIGHT-COLOR);
 	--MARGIN-SMALL: 3vw;
 	--MARGINLEFTMAIN-SMALL: 24vw;
-	--MARGINRIGHTMAIN-SMALL: 3vw;
-	--MARGINRIGHTCARD-SMALL: 0.5vw;
 	/*navigation*/
 	--HEADER_MENU_BUTTON_SIZE: 34px;
 	--HEADER_MENU_BUTTON_SINGLEBAR_HEIGHT: 3px;
@@ -65,7 +63,7 @@ body::before {
     z-index: -1;}
 body{
 	position: relative;
-	/*min-height: 100vh;*/
+	min-height: 100vh;
 
 	font-family: var(--FONT-FAMILY);
 	font-size: var(--FONT-SMALL);
@@ -196,15 +194,14 @@ main{
 	border-radius: 10px;
 	*/
 	width: 66%;
-	margin-right: var(--MARGINRIGHTMAIN-SMALL);
+
 	padding: var(--PADDING-SMALL);
 	
 	display: flex;
 	flex-flow: column;
 	align-items: center;}
 .card:target{ 
-	width: 110%;
-	margin-right: var(--MARGINRIGHTCARD-SMALL);
+	width: 100%;
 	transition: all 0.2s ease-in-out 0s;}
 .card:not(:target){
 	flex-grow: 1;
