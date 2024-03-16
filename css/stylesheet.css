@@ -37,6 +37,7 @@ html{
 	--MARGIN-SMALL: 3vw;
 	--MARGINLEFTMAIN-SMALL: 24vw;
 	--MARGINRIGHTMAIN-SMALL: 3vw;
+	--MARGINRIGHTCARD-SMALL: 0.5vw;
 	/*navigation*/
 	--HEADER_MENU_BUTTON_SIZE: 34px;
 	--HEADER_MENU_BUTTON_SINGLEBAR_HEIGHT: 3px;
@@ -64,7 +65,7 @@ body::before {
     z-index: -1;}
 body{
 	position: relative;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 
 	font-family: var(--FONT-FAMILY);
 	font-size: var(--FONT-SMALL);
@@ -183,24 +184,27 @@ main{
 	align-items: center;
 	gap: 0.5rem;
 	margin-left: var(--MARGINLEFTMAIN-SMALL);
-	margin-right: var(--MARGINRIGHTMAIN-SMALL);
+
 	padding: var(--PADDING-SMALL);}
 
 /*SETUP OF CARDS*/
 .card{
 	/*scroll-margin-top: 5rem;				/* to be adjusted*/
-	/*width: min(70%, 300px);*/
+	/*width: min(70%, 100px);*/
 	/*
 	border: var(--BORDER-LIGHT);
 	border-radius: 10px;
 	*/
+	width: 66%;
+	margin-right: var(--MARGINRIGHTMAIN-SMALL);
 	padding: var(--PADDING-SMALL);
+	
 	display: flex;
 	flex-flow: column;
 	align-items: center;}
 .card:target{ 
-	width: 90%;
-
+	width: 110%;
+	margin-right: var(--MARGINRIGHTCARD-SMALL);
 	transition: all 0.2s ease-in-out 0s;}
 .card:not(:target){
 	flex-grow: 1;
