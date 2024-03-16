@@ -157,8 +157,8 @@ header{
 	display: flex;
 	flex-flow: column nowrap;}
 .header__navlistitem{
-	width: 18vw;
-	margin-left: 6%;
+	width: 20vw;
+	margin-left: 5%;
 	padding: var(--PADDING-SMALL) var(--PADDING-XS);
 	border-top: 1px solid var(--NAVIGATION_LIST_COLOR);
 	font-style: italic;}
@@ -241,7 +241,7 @@ card p{
 	font-size: var(--FONT-SMALL);
 	text-align: left;}
 .card figcaption::after{
-	content: ' creation'; }
+	content: ''; }
 .card figcaption::first-letter{
 	font-size: var(--FONT-MEDIUM); }
 /*END of SETUP OF CARDS*/
