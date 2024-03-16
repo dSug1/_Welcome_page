@@ -87,12 +87,13 @@ footer{
 
 /* HEADER SETUP*/
 header{
-	top: 2vh;
+
 	position: sticky;
+	top: 4.2vh;
 	text-align: center;
 }
 .header__title-line{
-	margin-left: var(--MARGIN-SMALL);
+	margin: 0 var(--MARGIN-SMALL) 0 var(--MARGIN-SMALL);
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;}
