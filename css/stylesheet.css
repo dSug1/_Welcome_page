@@ -1,11 +1,11 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* start RESET*/
-/*
+
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;}*/
+	box-sizing: border-box;}
 img{
 	display: block;
 	max-width: 100%;
@@ -35,6 +35,8 @@ html{
 	--PADDING-MEDIUM: 1rem;
 	--BORDER-LIGHT:	2px solid var(--LIGHT-COLOR);
 	--MARGIN-SMALL: 3vw;
+	--MARGINLEFTMAIN-SMALL: 24vw;
+	--MARGINRIGHTMAIN-SMALL: 3vw;
 	/*navigation*/
 	--HEADER_MENU_BUTTON_SIZE: 34px;
 	--HEADER_MENU_BUTTON_SINGLEBAR_HEIGHT: 3px;
@@ -72,7 +74,8 @@ body{
 	backdrop-filter: brightness(70%);
 	
 	display: flex;
-	flex-direction: column;}
+	flex-direction: column;
+	}
 nav a:any-link{
 	color: var(--LIGHT-COLOR);
 	text-decoration: none;}
@@ -88,10 +91,9 @@ header{
 	top: 2vh;
 	position: sticky;
 	text-align: center;
-	height: 34vh;}
+}
 .header__title-line{
-	margin-left: 3vw;
-	padding: 0 var(--PADDING-SMALL);
+	margin-left: var(--MARGIN-SMALL);
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;}
@@ -133,8 +135,6 @@ header{
 	transform-origin: top center;
 	animation: shownavigation 0.5s ease-in-out forwards;
 	background-color: var(--HEADER-BGCOLOR);}
-:is(header:hover, header:focus-within /*header:focus-visible*/) .header__navigation{
-	display: flex;}
 @keyframes shownavigation{
 	0%{
 		transform: scaleY(0);
@@ -145,20 +145,26 @@ header{
 	100%{
 		transform: scaleY(1);
 	}}
+
+:is(header:hover, header:focus-within /*header:focus-visible*/) .header__navigation{
+	display: flex;}
+:is(header:hover, header:focus-within /*header:focus-visible*/) header{
+	flex-grow : 1;}
+
 .header__navlist{
 	list-style-type: none;
-	padding-inline-start: var(--PADDING-SMALL);
+	/*padding-inline-start: var(--PADDING-SMALL);*/
 	display: flex;
 	flex-flow: column nowrap;}
 .header__navlistitem{
-	width: 20vw;
-	margin-left: 7%;
+	width: 18vw;
+	margin-left: 6%;
 	padding: var(--PADDING-SMALL) var(--PADDING-XS);
 	border-top: 1px solid var(--NAVIGATION_LIST_COLOR);
 	font-style: italic;}
 .header__navlistitem:nth-child(1){
-	width: 20vw;
-	margin-left: 5%;
+	width: 18vw;
+	margin-left: 4%;
 	padding: var(--PADDING-SMALL) var(--PADDING-XS);
 	border-top: 1px solid var(--NAVIGATION_LIST_COLOR);
 	font-style: normal;}
@@ -175,7 +181,9 @@ main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*gap: 1.5rem;*/
+	gap: 0.5rem;
+	margin-left: var(--MARGINLEFTMAIN-SMALL);
+	margin-right: var(--MARGINRIGHTMAIN-SMALL);
 	padding: var(--PADDING-SMALL);}
 
 /*SETUP OF CARDS*/
